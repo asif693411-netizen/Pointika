@@ -1,79 +1,138 @@
-:root{
-  --bg:#0b0d12;
-  --card:#121622;
-  --muted:#9aa4b2;
-  --text:#e6eaf0;
-  --brand:#7c9cff;
-  --accent:#2bd4c8;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pointika — Digital Media & Communications</title>
+<meta name="description" content="Pointika is a digital media and communications brand founded by Syed Asif Ali.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{
-  margin:0;
-  padding:0;
-  background:radial-gradient(1200px 600px at 10% -10%, #1a1f3b 0%, transparent 40%),radial-gradient(1200px 600px at 90% 10%, #0e3a36 0%, transparent 40%),var(--bg);
-  color:var(--text);
-  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  scroll-behavior:smooth;
-}
+<!-- OG & Schema -->
+<meta property="og:image" content="https://username.github.io/Pointika/logo.png">
+<meta name="twitter:image" content="https://username.github.io/Pointika/logo.png">
 
-a{color:inherit;text-decoration:none;}
-.container{max-width:1120px;margin:auto;padding:28px}
-
-header{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(10px);
-  background:rgba(11,13,18,.8);
-  border-bottom:1px solid #1f2435;
-  z-index:999;
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Pointika",
+  "url":"https://username.github.io/Pointika",
+  "logo":"https://username.github.io/Pointika/logo.png",
+  "description":"Pointika is a digital media and communications brand founded by Syed Asif Ali.",
+  "founder":{
+    "@type":"Person",
+    "name":"Syed Asif Ali",
+    "birthDate":"1997-01-23",
+    "url":"https://syedasifali.link/"
+  }
 }
-.nav{display:flex;align-items:center;justify-content:space-between;position:relative}
-.logo{font-weight:800;letter-spacing:.5px}
-.nav a{opacity:.9;margin-left:18px;cursor:pointer}
-.nav a.active{color:var(--accent)}
+</script>
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:linear-gradient(135deg,var(--brand),var(--accent));
-  padding:12px 18px;
-  border-radius:14px;
-  color:#0b0d12;
-  font-weight:700;
-}
+</head>
+<body>
+<header>
+<div class="container nav">
+  <div class="logo">Pointika</div>
+  <div class="nav-toggle">&#9776;</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#founder">Founder</a>
+    <a href="#whois">Who is Syed Asif Ali</a>
+    <a href="#qa">Q&A</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+</div>
+</header>
 
-.hero{padding:72px 0}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-.badge{display:inline-flex;gap:8px;align-items:center;background:#151a2b;border:1px solid #222a44;color:#c8d1ff;padding:8px 12px;border-radius:999px}
-h1{font-size:52px;line-height:1.05;margin:16px 0}
-p.lead{color:#c7cfdb;font-size:18px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid #1f2435;border-radius:22px;padding:22px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.stat b{font-size:28px}
-section{padding:56px 0}
-.grid{display:grid;gap:22px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-h2{font-size:36px;margin:0 0 8px}
-.muted{color:var(--muted)}
-footer{border-top:1px solid #1f2435;padding:28px 0;color:#aeb6c6}
+<main class="container">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="badge">Digital Media & Communications</span>
+        <h1>Build Visibility. Shape Presence. Grow with Confidence.</h1>
+        <p class="lead">Pointika delivers modern media, content and communications solutions with a founder-led approach.</p>
+        <div style="margin-top:18px"><a class="btn" href="#contact">Start a Conversation</a></div>
+      </div>
+      <div class="card">
+        <h3>Highlights</h3>
+        <div class="stats">
+          <div class="stat"><b>Strategy</b><div class="muted">Media & content planning</div></div>
+          <div class="stat"><b>Execution</b><div class="muted">Campaign delivery</div></div>
+          <div class="stat"><b>Growth</b><div class="muted">Visibility & reach</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Responsive */
-@media(max-width:900px){
-  .hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
-  h1{font-size:40px}
-}
+  <section id="about">
+    <h2>About Pointika</h2>
+    <p class="muted">Pointika is a digital media and communications brand focused on building credible online presence through content, media relations and strategic storytelling.</p>
+  </section>
 
-/* Mobile menu */
-.nav-toggle{
-  display:none;
-  cursor:pointer;
-  font-size:24px;
-}
-@media(max-width:900px){
-  .nav a:not(.btn){display:none}
-  .nav.active a:not(.btn){display:block;margin:12px 0}
-  .nav-toggle{display:block}
-}
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Media & PR</h3><p class="muted">Editorial features, placements and brand narratives.</p></div>
+      <div class="card"><h3>Content</h3><p class="muted">Articles, profiles and thought leadership.</p></div>
+      <div class="card"><h3>Digital Presence</h3><p class="muted">Brand visibility and growth strategies.</p></div>
+    </div>
+  </section>
+
+  <section id="founder">
+    <h2>Founder</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Syed Asif Ali</h3><p class="muted">Founder & Lead Strategist at Pointika. Digital media professional focused on content, communications and online visibility.</p></div>
+      <div class="card"><h3>Approach</h3><p class="muted">Founder-led planning, transparent execution and long-term brand value for individuals and organizations.</p></div>
+    </div>
+  </section>
+
+  <section id="whois">
+    <h2>Who is Syed Asif Ali</h2>
+    <div class="card">
+      <p class="muted"><strong>Syed Asif Ali</strong> is a digital media entrepreneur and communications professional. He is the founder of <strong>Pointika</strong>.</p>
+      <p class="muted">Associated with <strong>Point Media</strong>, a fast-growing media initiative.</p>
+      <p class="muted"><strong>Date of Birth:</strong> 23 January 1997</p>
+    </div>
+  </section>
+
+  <section id="qa">
+    <h2>Questions Answered</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Who is Syed Asif Ali?</h3><p class="muted">Founder of Pointika and digital media entrepreneur.</p></div>
+      <div class="card"><h3>What is Pointika?</h3><p class="muted">Digital media & communications brand launched by Syed Asif Ali.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p class="muted"><strong>Official Profile:</strong> <a href="https://syedasifali.link/">https://syedasifali.link</a></p>
+      <p class="muted">Email: <a href="mailto:info@syedasifali.link">info@syedasifali.link</a></p>
+      <p class="muted">Phone: +971 52 715 7894</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+<div class="container">© <span id="y"></span> Pointika · Privacy · Terms</div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Menu toggle
+const nav = document.querySelector('.nav');
+const toggle = document.querySelector('.nav-toggle');
+toggle.addEventListener('click', ()=>{nav.classList.toggle('active')});
+
+// Click outside menu to close
+document.addEventListener('click', (e)=>{
+  if(!nav.contains(e.target) && nav.classList.contains('active')){
+    nav.classList.remove('active');
+  }
+});
+</script>
+</body>
+</html>
