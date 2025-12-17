@@ -202,4 +202,47 @@
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
+<script>
+/* ACTIVE MENU FIX */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav a[href^='#']");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 140;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+/* MOBILE MENU */
+const toggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav nav");
+
+toggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+/* FADE IN */
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{ threshold:0.2 });
+
+faders.forEach(fade => observer.observe(fade));
+</script>
 </html>
