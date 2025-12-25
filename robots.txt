@@ -1,6 +1,4 @@
-# Allow all search engines to crawl all pages
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://asif693411-netizen.github.io/Pointika/sitemap.xml
+Sitemap: https://pointika.link/sitemap.xml
