@@ -3,48 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pointika — Digital Media & Communications | Syed Asif Ali</title>
-<meta name="description" content="Pointika is a digital media & communications platform founded by Syed Asif Ali, offering branding, content strategy, and online visibility solutions.">
+<title>Pointika — Digital Media & Communications</title>
+<meta name="description" content="Pointika is an independent digital media & communications initiative founded by Syed Asif Ali, delivering content, branding, and online visibility solutions.">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="/favicon.png">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Structured Data for Google / Brand -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Pointika",
-  "url": "https://syedasifali.link",
-  "logo": "https://syedasifali.link/logo.png",
-  "sameAs": [
-    "https://www.instagram.com/boxer_01101",
-    "https://www.tiktok.com/@syed_asif_ali34",
-    "https://www.youtube.com/@AsifAli",
-    "https://www.linkedin.com/in/pointmedia",
-    "https://x.com/Boxer_01101",
-    "https://medium.com/@asif693411",
-    "https://www.facebook.com/share/1DokMS7GB9/"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "Syed Asif Ali",
-    "birthDate": "1997-01-23",
-    "sameAs": "https://syedasifali.link"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@syedasifali.link",
-    "contactType": "Customer Service"
-  }
-}
-</script>
 
 <style>
 :root{
@@ -55,46 +19,47 @@
 --muted:#9aa4b2;
 --brand:#7c9cff;
 --accent:#2bd4c8;
---cta:#00ffff;
 }
 *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Arial,sans-serif}
 body{background:var(--bg);color:var(--text);line-height:1.7;scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit}
 .container{max-width:1100px;margin:auto;padding:30px}
-header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-.header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+header{position:sticky;top:0;z-index:100;transition:0.3s;background:rgba(11,13,18,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:15px;}
 .brand img{height:55px;}
 .brand h1{font-size:22px;font-weight:700;color:var(--brand);}
-nav a{margin-left:20px;color:var(--muted);font-weight:500;transition:.3s;position:relative;}
-nav a::after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--brand);transition:.3s;}
-nav a:hover::after,nav a.active::after{width:100%;}
-.hero{padding:140px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('hero-placeholder.jpg') center/cover no-repeat;color:#fff;position:relative;}
-.hero h2{font-size:48px;font-weight:800;margin-bottom:20px;}
-.hero p{font-size:20px;color:#c7cfdb;max-width:720px;margin:auto;margin-bottom:25px;}
-.hero .cta{display:inline-block;padding:15px 30px;border-radius:50px;background:var(--cta);color:#0b0d12;font-weight:700;font-size:16px;transition:.3s;}
-.hero .cta:hover{background:var(--accent);transform:translateY(-3px);}
+nav a{margin-left:20px;color:var(--muted);font-weight:500;transition:.3s;}
+nav a:hover, nav a.active{color:var(--brand);}
+.hero{padding:120px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('hero-placeholder.jpg') center/cover no-repeat;color:#fff;}
+.hero h2{font-size:48px;font-weight:800;margin-bottom:15px;}
+.hero p{font-size:20px;color:#c7cfdb;max-width:720px;margin:auto;}
+.badge{display:inline-block;margin-top:25px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b0d12;font-weight:700;}
 section{padding:80px 0;border-top:1px solid var(--border);}
 h3{font-size:34px;margin-bottom:20px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px;transition:transform .3s;}
 .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.5);}
 .grid{display:grid;gap:24px;}
 .grid-3{grid-template-columns:repeat(3,1fr);}
-.service{padding:25px;border-radius:20px;background:#14182a;border:1px solid var(--border);text-align:center;transition:.3s;}
+.service{padding:25px;border-radius:20px;background:#14182a;border:1px solid var(--border);text-align:center;}
 .service i{font-size:28px;color:var(--brand);margin-bottom:10px;display:block;}
-.service:hover{transform:translateY(-5px);box-shadow:0 8px 18px rgba(0,0,0,.4);}
 .social{display:flex;flex-wrap:wrap;gap:22px;margin-top:25px;justify-content:center;}
 .social a{font-size:24px;color:var(--muted);transition:.3s;}
 .social a:hover{color:var(--brand);}
+
+/* Accordion Q&A */
 .accordion{background:var(--card);border:1px solid var(--border);border-radius:20px;margin-bottom:15px;cursor:pointer;padding:20px;transition:.3s;}
-.accordion:hover{background:#1e2230;}
-.panel{padding:0 20px;display:none;background:var(--card);color:var(--muted);}
+.accordion:hover,.accordion.active{background:#1e2230;}
+.panel{max-height:0;overflow:hidden;padding:0 20px;background:var(--card);color:var(--muted);transition:max-height .3s ease;}
+.panel p{margin:10px 0;}
+
 footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:var(--muted);}
-@media(max-width:900px){.hero h2{font-size:36px}.grid-3{grid-template-columns:1fr}nav a{margin-left:10px;font-size:14px}}
+
+@media(max-width:900px){.hero h2{font-size:36px}.grid-3{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
+
 <header>
 <div class="container header-inner">
 <div class="brand">
@@ -102,7 +67,7 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 <h1>Pointika</h1>
 </div>
 <nav>
-<a href="#about" class="active">About</a>
+<a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#founder">Founder</a>
 <a href="#story">Story</a>
@@ -116,7 +81,7 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 <section class="hero">
 <h2>Build Visibility.<br>Shape Digital Presence.</h2>
 <p>Pointika is a founder-led digital media & communications initiative delivering content, branding and online visibility solutions.</p>
-<a href="#contact" class="cta">Work With Us</a>
+<div class="badge">Founded by Syed Asif Ali</div>
 </section>
 
 <section id="about" class="container">
@@ -152,15 +117,15 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 <section id="qa" class="container">
 <h3>Questions & Answers</h3>
 <div class="accordion">Who is Syed Asif Ali?</div>
-<div class="panel"><p>Entrepreneur & founder of Pointika.</p></div>
+<div class="panel"><p>Entrepreneur & founder of Pointika, leading digital media initiatives across UAE and Pakistan.</p></div>
 <div class="accordion">What is Pointika?</div>
-<div class="panel"><p>Digital media & communications brand focused on content & media visibility.</p></div>
+<div class="panel"><p>A digital media & communications platform offering content, branding, and online visibility solutions.</p></div>
 <div class="accordion">Is Syed Asif Ali linked with Point Media?</div>
-<div class="panel"><p>Yes, associated with Point Media initiative.</p></div>
+<div class="panel"><p>Yes, he is the founder and driving force behind Point Media initiative.</p></div>
 <div class="accordion">When was Pointika launched?</div>
-<div class="panel"><p>Launched to expand online media & brand presence.</p></div>
+<div class="panel"><p>Pointika was launched to provide strategic media and branding solutions to businesses and individuals.</p></div>
 <div class="accordion">Where does Pointika operate?</div>
-<div class="panel"><p>Primarily UAE and Pakistan markets.</p></div>
+<div class="panel"><p>Primarily UAE and Pakistan markets, supporting clients with digital media and branding services.</p></div>
 </section>
 
 <section id="contact" class="container">
@@ -188,27 +153,34 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 
 <script>
 // Accordion functionality
-var acc = document.getElementsByClassName("accordion");
-for(let i=0;i<acc.length;i++){
-  acc[i].addEventListener("click",function(){
-    this.classList.toggle("active");
-    var panel=this.nextElementSibling;
-    if(panel.style.display==="block"){panel.style.display="none";}
-    else{panel.style.display="block";}
+document.addEventListener("DOMContentLoaded", function() {
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+      const panel = item.nextElementSibling;
+      if(panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
   });
-});
 
-// Active nav on scroll
-window.addEventListener('scroll',function(){
-  const sections=document.querySelectorAll('section');
-  const scrollPos=window.scrollY+100;
-  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
-  sections.forEach(sec=>{
-    if(scrollPos>=sec.offsetTop && scrollPos<sec.offsetTop+sec.offsetHeight){
-      const id=sec.getAttribute('id');
-      const link=document.querySelector('nav a[href="#'+id+'"]');
-      if(link) link.classList.add('active');
-    }
+  // Active link on scroll
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("header nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if(pageYOffset >= sectionTop) current = section.getAttribute("id");
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if(link.getAttribute("href") === "#" + current) link.classList.add("active");
+    });
   });
 });
 </script>
