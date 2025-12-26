@@ -80,6 +80,12 @@ nav a:hover{color:var(--brand)}
 .badge{margin-top:15px;display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b0d12;font-weight:700}
 .badge a{color:#0b0d12;text-decoration:none;font-weight:700}
 
+/* BRAND STATS */
+.stats{display:flex;justify-content:center;gap:40px;margin-top:25px;text-align:center}
+.stats div{background:var(--card);padding:20px 25px;border-radius:20px;border:1px solid var(--border);width:160px}
+.stats div h3{font-size:28px;margin-bottom:10px;color:var(--brand)}
+.stats div p{font-size:14px;color:var(--muted)}
+
 /* SECTIONS */
 section{padding:80px 0;border-top:1px solid var(--border)}
 h3{font-size:34px;margin-bottom:20px}
@@ -104,6 +110,7 @@ nav.show{display:flex}
 .menu-btn{display:block}
 .grid-3{grid-template-columns:1fr}
 .hero h2{font-size:34px}
+.stats{flex-direction:column;gap:15px}
 }
 </style>
 </head>
@@ -134,6 +141,22 @@ nav.show{display:flex}
 <div class="badge">Founded by Syed Asif Ali</div>
 <div class="badge">
   Verified on <a href="https://www.crunchbase.com/organization/pointika" target="_blank">Crunchbase</a> & <a href="https://www.wikidata.org/wiki/Q1234567" target="_blank">Wikidata</a>
+</div>
+
+<!-- Brand Stats -->
+<div class="stats">
+  <div>
+    <h3>100K+</h3>
+    <p>Followers</p>
+  </div>
+  <div>
+    <h3>1M+</h3>
+    <p>Monthly Reach</p>
+  </div>
+  <div>
+    <h3>500+</h3>
+    <p>Collaborations</p>
+  </div>
 </div>
 </section>
 
@@ -175,6 +198,8 @@ nav.show{display:flex}
 <div class="panel"><p>International digital media & communications brand focused on content, media visibility, and strategic storytelling.</p></div>
 <div class="accordion">Where does Pointika operate?</div>
 <div class="panel"><p>UAE, Pakistan, and international markets.</p></div>
+<div class="accordion">What services does Pointika offer?</div>
+<div class="panel"><p>Media, content strategy, online visibility, and brand growth solutions.</p></div>
 </section>
 
 <section id="contact" class="container">
