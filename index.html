@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- JSON-LD Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -79,7 +78,8 @@ nav a:hover{color:var(--brand)}
 .stats p{color:var(--muted)}
 
 /* SECTIONS */
-section{padding:80px 0;border-top:1px solid var(--border)}
+section{padding:80px 0;border-top:1px solid var(--border);opacity:0;transform:translateY(20px);transition:all 0.8s ease}
+section.visible{opacity:1;transform:translateY(0);}
 h3{font-size:34px;margin-bottom:20px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px}
 .grid{display:grid;gap:24px}
@@ -137,15 +137,15 @@ nav.show{display:flex}
 
 <div class="stats">
   <div>
-    <h3>100K+</h3>
+    <h3 id="followers">0</h3>
     <p>Followers</p>
   </div>
   <div>
-    <h3>1M+</h3>
+    <h3 id="reach">0</h3>
     <p>Reach</p>
   </div>
   <div>
-    <h3>1B+</h3>
+    <h3 id="impressions">0</h3>
     <p>Impressions</p>
   </div>
 </div>
@@ -214,23 +214,45 @@ Facebook: <a href="https://www.facebook.com/share/1DokMS7GB9/" target="_blank">P
 <footer>© 2025 Pointika</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("nav").classList.toggle("show");
-}
+function toggleMenu(){document.getElementById("nav").classList.toggle("show");}
 
-// Smooth slide Q&A
+// Q&A
 document.querySelectorAll(".accordion").forEach(a=>{
   a.addEventListener("click",()=>{
     a.classList.toggle("active");
-    const panel = a.nextElementSibling;
+    const panel=a.nextElementSibling;
     if(panel.style.maxHeight){
-      panel.style.maxHeight = null;
-      panel.style.padding = "0 20px";
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-      panel.style.padding = "15px 20px";
+      panel.style.maxHeight=null; panel.style.padding="0 20px";
+    }else{
+      panel.style.maxHeight=panel.scrollHeight+"px"; panel.style.padding="15px 20px";
     }
   });
+});
+
+// Animated stats
+function animateCounter(id, target, duration){
+  let start=0;
+  let step=Math.ceil(target/(duration/20));
+  let obj=document.getElementById(id);
+  let counter=setInterval(()=>{
+    start+=step;
+    if(start>=target){start=target; clearInterval(counter);}
+    obj.textContent=start.toLocaleString();
+  },20);
+}
+window.addEventListener("load",()=>{
+  animateCounter("followers",100000);
+  animateCounter("reach",1000000);
+  animateCounter("impressions",1000000000);
+
+  // Scroll fade-in
+  const sections=document.querySelectorAll("section");
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("visible");}
+    });
+  },{threshold:0.2});
+  sections.forEach(sec=>observer.observe(sec));
 });
 </script>
 
