@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pointika — Digital Media & Communications</title>
-<meta name="description" content="Pointika is an independent digital media & communications initiative founded by Syed Asif Ali.">
+<meta name="description" content="Pointika is a founder-led digital media & communications brand delivering content, branding, and online visibility solutions.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Business Schema for Google -->
+<!-- Business Schema + Crunchbase + Wikidata -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +30,8 @@
   },
   "founder": {
     "@type": "Person",
-    "name": "Syed Asif Ali"
+    "name": "Syed Asif Ali",
+    "url": "https://syedasifali.link"
   },
   "sameAs": [
     "https://www.instagram.com/boxer_01101",
@@ -39,21 +40,19 @@
     "https://www.linkedin.com/in/pointmedia",
     "https://x.com/Boxer_01101",
     "https://medium.com/@asif693411",
-    "https://www.facebook.com/share/1DokMS7GB9/"
+    "https://www.facebook.com/share/1DokMS7GB9/",
+    "https://www.crunchbase.com/organization/pointika",
+    "https://www.wikidata.org/wiki/Q12345678"
   ],
-  "description": "Pointika is an independent digital media & communications initiative delivering content, branding and online visibility solutions."
+  "description": "Pointika is a founder-led digital media & communications brand delivering content, branding, and online visibility solutions."
 }
 </script>
 
 <style>
 :root{
---bg: #ffffff;
---card: #f5f5f5;
---border: #e0e0e0;
---text: #111111;
---muted: #555555;
---brand: #2563eb;
---accent: #22c55e;
+--bg:#0b0d12;--card:#121622;--border:#1f2435;
+--text:#e6eaf0;--muted:#9aa4b2;
+--brand:#7c9cff;--accent:#2bd4c8;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter}
 body{background:var(--bg);color:var(--text);line-height:1.7}
@@ -61,7 +60,7 @@ a{text-decoration:none;color:inherit}
 .container{max-width:1100px;margin:auto;padding:30px}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:99;background:var(--bg);border-bottom:1px solid var(--border)}
+header{position:sticky;top:0;z-index:99;background:#0b0d12;border-bottom:1px solid var(--border)}
 .header-inner{display:flex;justify-content:space-between;align-items:center}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{height:44px}
@@ -72,10 +71,11 @@ nav a:hover{color:var(--brand)}
 .menu-btn{display:none;font-size:24px;cursor:pointer}
 
 /* HERO */
-.hero{padding:110px 20px;text-align:center;background:linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('hero-placeholder.jpg') center/cover}
-.hero h2{font-size:46px;font-weight:800}
-.hero p{max-width:720px;margin:15px auto;color:var(--text)}
-.badge{margin-top:25px;display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;font-weight:700}
+.hero{padding:120px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('hero-placeholder.jpg') center/cover}
+.hero h2{font-size:50px;font-weight:800;line-height:1.2}
+.hero p{max-width:720px;margin:15px auto;color:#c7cfdb;font-size:20px}
+.badge{margin-top:25px;display:inline-block;padding:14px 28px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b0d12;font-weight:700;font-size:16px;cursor:pointer;transition:.3s}
+.badge:hover{transform:scale(1.05)}
 
 /* SECTIONS */
 section{padding:80px 0;border-top:1px solid var(--border)}
@@ -83,12 +83,12 @@ h3{font-size:34px;margin-bottom:20px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px}
 .grid{display:grid;gap:24px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
-.service{text-align:center;padding:25px;border-radius:20px;background:var(--card)}
+.service{text-align:center;padding:25px;border-radius:20px;background:#14182a;border:1px solid var(--border)}
 .service i{font-size:28px;color:var(--brand);margin-bottom:10px}
 
 /* ACCORDION */
 .accordion{cursor:pointer;padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--border);margin-bottom:10px}
-.accordion.active{background:#e0e0e0}
+.accordion.active{background:#1e2230}
 .panel{display:none;padding:15px 20px;color:var(--muted)}
 
 /* FOOTER */
@@ -96,11 +96,11 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 
 /* MOBILE */
 @media(max-width:900px){
-nav{display:none;flex-direction:column;background:var(--bg);position:absolute;top:70px;right:20px;border:1px solid var(--border);border-radius:14px;padding:15px}
+nav{display:none;flex-direction:column;background:#0b0d12;position:absolute;top:70px;right:20px;border:1px solid var(--border);border-radius:14px;padding:15px}
 nav.show{display:flex}
 .menu-btn{display:block}
 .grid-3{grid-template-columns:1fr}
-.hero h2{font-size:34px}
+.hero h2{font-size:36px}
 }
 </style>
 </head>
@@ -126,15 +126,16 @@ nav.show{display:flex}
 </header>
 
 <section class="hero">
-<h2>Build Visibility.<br>Shape Digital Presence.</h2>
-<p>Founder-led digital media & communications initiative.</p>
-<div class="badge">Founded by Syed Asif Ali</div>
+<h2>Build Visibility.<br>Shape Your Digital Presence.</h2>
+<p>Founder-led digital media & communications brand delivering content, branding, and online visibility solutions.</p>
+<div class="badge" onclick="window.location.href='https://syedasifali.link'">Visit Website</div>
 </section>
 
 <section id="about" class="container">
 <h3>About Pointika</h3>
 <div class="card">
-<p><strong>Pointika</strong> is an independent digital media & communications brand focused on storytelling, visibility and credibility.</p>
+<p><strong>Pointika</strong> is an independent digital media & communications brand focused on storytelling, visibility, and credibility.</p>
+<p>Personal Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a></p>
 </div>
 </section>
 
@@ -164,24 +165,31 @@ nav.show{display:flex}
 <section id="qa" class="container">
 <h3>Q & A</h3>
 <div class="accordion">Who is Syed Asif Ali?</div>
-<div class="panel">Founder of Pointika.</div>
+<div class="panel">Founder of Pointika, digital creator, and entrepreneur.</div>
 <div class="accordion">What is Pointika?</div>
-<div class="panel">Digital media & communications brand.</div>
+<div class="panel">Independent digital media & communications brand delivering content and online visibility solutions.</div>
+<div class="accordion">Where can I follow Syed Asif Ali?</div>
+<div class="panel">
+Instagram: <a href="https://www.instagram.com/boxer_01101" target="_blank">@boxer_01101</a><br>
+TikTok: <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">@syed_asif_ali34</a><br>
+YouTube: <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">@AsifAli-Digital</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/pointmedia" target="_blank">Point Media</a><br>
+Personal Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a>
+</div>
 </section>
 
 <section id="contact" class="container">
 <h3>Connect</h3>
 <div class="card">
 <p>Email: <strong>info@syedasifali.link</strong></p>
+<p>Visit: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a></p>
 </div>
 </section>
 
-<footer>© 2025 Pointika</footer>
+<footer>© 2025 Pointika · Digital Media & Communications</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("nav").classList.toggle("show");
-}
+function toggleMenu(){document.getElementById("nav").classList.toggle("show");}
 document.querySelectorAll(".accordion").forEach(a=>{
   a.onclick=()=>{a.classList.toggle("active");a.nextElementSibling.style.display=a.nextElementSibling.style.display==="block"?"none":"block";}
 });
