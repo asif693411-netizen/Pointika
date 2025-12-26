@@ -4,18 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pointika — Digital Media & Communications</title>
-<meta name="description" content="Pointika is an independent digital media & communications initiative founded by Syed Asif Ali.">
+<meta name="description" content="Pointika is an international digital media and communications brand founded by Syed Asif Ali. Strategic storytelling, media visibility, and credible online presence.">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- JSON-LD Structured Data -->
+<!-- LocalBusiness + Knowledge Panel JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,7 +42,7 @@
     "https://www.crunchbase.com/organization/pointika",
     "https://www.wikidata.org/wiki/Q1234567"
   ],
-  "description": "Pointika is a digital media & communications brand delivering content, branding and online visibility solutions internationally."
+  "description": "Pointika is a global digital media & communications brand delivering content, strategic storytelling, and credible online presence worldwide."
 }
 </script>
 
@@ -80,7 +75,7 @@ nav a:hover{color:var(--brand)}
 .badge{margin-top:15px;display:inline-block;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b0d12;font-weight:700}
 .badge a{color:#0b0d12;text-decoration:none;font-weight:700}
 
-/* BRAND STATS */
+/* Brand Stats */
 .stats{display:flex;justify-content:center;gap:40px;margin-top:25px;text-align:center}
 .stats div{background:var(--card);padding:20px 25px;border-radius:20px;border:1px solid var(--border);width:160px}
 .stats div h3{font-size:28px;margin-bottom:10px;color:var(--brand)}
@@ -137,7 +132,7 @@ nav.show{display:flex}
 
 <section class="hero">
 <h2>Build Visibility.<br>Shape Digital Presence.</h2>
-<p>Founder-led digital media & communications initiative.</p>
+<p>Founder-led international digital media & communications initiative.</p>
 <div class="badge">Founded by Syed Asif Ali</div>
 <div class="badge">
   Verified on <a href="https://www.crunchbase.com/organization/pointika" target="_blank">Crunchbase</a> & <a href="https://www.wikidata.org/wiki/Q1234567" target="_blank">Wikidata</a>
@@ -146,15 +141,15 @@ nav.show{display:flex}
 <!-- Brand Stats -->
 <div class="stats">
   <div>
-    <h3>100K+</h3>
+    <h3 class="counter" data-target="986498">0</h3>
     <p>Followers</p>
   </div>
   <div>
-    <h3>1M+</h3>
+    <h3 class="counter" data-target="1000000">0</h3>
     <p>Monthly Reach</p>
   </div>
   <div>
-    <h3>500+</h3>
+    <h3 class="counter" data-target="120">0</h3>
     <p>Collaborations</p>
   </div>
 </div>
@@ -163,7 +158,7 @@ nav.show{display:flex}
 <section id="about" class="container">
 <h3>About Pointika</h3>
 <div class="card">
-<p><strong>Pointika</strong> is an independent digital media & communications brand focused on storytelling, visibility and credibility. Founder: <strong>Syed Asif Ali</strong></p>
+<p><strong>Pointika</strong> is a global digital media & communications brand focused on storytelling, visibility, and credibility. Founder: <strong>Syed Asif Ali</strong></p>
 </div>
 </section>
 
@@ -186,20 +181,22 @@ nav.show{display:flex}
 <section id="story" class="container">
 <h3>Founder Story</h3>
 <div class="card">
-<p>Born in South Waziristan Agency, raised in challenging conditions, I transformed limitations into vision and founded Pointika.</p>
+<p>Born in South Waziristan Agency, Syed Asif Ali transformed limitations into vision and founded Pointika to empower brands globally.</p>
 </div>
 </section>
 
 <section id="qa" class="container">
 <h3>Questions & Answers</h3>
 <div class="accordion">Who is Syed Asif Ali?</div>
-<div class="panel"><p>Founder & entrepreneur, leading digital media & communications globally.</p></div>
+<div class="panel"><p>Founder & entrepreneur, leading international digital media & communications projects.</p></div>
 <div class="accordion">What is Pointika?</div>
 <div class="panel"><p>International digital media & communications brand focused on content, media visibility, and strategic storytelling.</p></div>
 <div class="accordion">Where does Pointika operate?</div>
-<div class="panel"><p>UAE, Pakistan, and international markets.</p></div>
+<div class="panel"><p>UAE, Pakistan, Europe, and global markets.</p></div>
 <div class="accordion">What services does Pointika offer?</div>
 <div class="panel"><p>Media, content strategy, online visibility, and brand growth solutions.</p></div>
+<div class="accordion">Official Website & Social Media?</div>
+<div class="panel"><p>Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a> | Instagram, TikTok, YouTube, LinkedIn, X, Medium, Facebook.</p></div>
 </section>
 
 <section id="contact" class="container">
@@ -222,12 +219,28 @@ nav.show{display:flex}
 <footer>© 2025 Pointika · Digital Media & Communications</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("nav").classList.toggle("show");
-}
+function toggleMenu(){document.getElementById("nav").classList.toggle("show");}
+
 // Accordion Q&A
 document.querySelectorAll(".accordion").forEach(a=>{
   a.onclick=()=>{a.classList.toggle("active");a.nextElementSibling.style.display=a.nextElementSibling.style.display==="block"?"none":"block";}
+});
+
+// Animated Counters
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText.replace(/,/g,'');
+    const increment = target / 200;
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment).toLocaleString();
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target.toLocaleString();
+    }
+  };
+  updateCount();
 });
 </script>
 
