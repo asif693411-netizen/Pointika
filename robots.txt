@@ -1,9 +1,32 @@
-# Allow all search engines to crawl main content
+# Robots.txt for Point Media & Pointika
+# Allow all main search engines to crawl essential content
+
 User-agent: *
 Disallow: /private/
 Disallow: /tmp/
+Disallow: /backup/
+Disallow: /old/
 Allow: /
 
-# Sitemap location
+# Crawl-delay (optional, avoids server overload)
+Crawl-delay: 10
+
+# Sitemap locations for faster indexing
 Sitemap: https://pointmedia.link/sitemap.xml
 Sitemap: https://pointika.link/sitemap.xml
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# Important notes:
+# - 'Disallow' blocks irrelevant folders from crawling
+# - 'Allow: /' ensures main pages, logos, images, and JSON-LD are indexed
+# - Sitemap locations guide search engines to all your URLs
+# - Crawl-delay prevents server overload while crawling
