@@ -3,10 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Pointika — Sub-Brand of Point Media</title>
-<meta name="description" content="Learn about Pointika, the digital media and storytelling sub-brand of Point Media, focused on influencer management, content creation, and brand storytelling.">
+<title>About Pointika | Sub-Brand of Point Media</title>
+<meta name="description" content="Pointika is a digital storytelling and media platform, sub-brand of Point Media. Explore its journey, achievements, and campaigns managed across influencers and brands.">
 
 <link rel="canonical" href="https://pointika.link/about.html">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+  line-height:1.7;
+}
+
+/* NAVIGATION */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#020617;
+  z-index:1000;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:20px;
+  font-weight:bold;
+  color:#60a5fa;
+}
+.menu{
+  display:flex;
+  gap:25px;
+}
+.menu a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:15px;
+}
+.menu a:hover{color:#60a5fa;}
+.menu-btn{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu{
+    position:fixed;
+    top:60px;
+    right:-100%;
+    background:#020617;
+    flex-direction:column;
+    width:240px;
+    padding:20px;
+    height:100vh;
+    transition:0.3s;
+  }
+  .menu.show{right:0;}
+  .menu-btn{display:block;}
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#1e3a8a,#0f172a);
+  padding:120px 20px 60px;
+  text-align:center;
+}
+header h1{margin:0;font-size:36px;color:#fff;}
+header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{color:#60a5fa;margin-bottom:20px;}
+.card{
+  background:#020617;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  margin-bottom:40px;
+}
+.brand{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.brand div{
+  background:#020617;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #1e293b;
+}
+footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  font-size:14px;
+}
+a{color:#60a5fa;text-decoration:none;}
+a:hover{text-decoration:underline;}
+</style>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -14,107 +123,110 @@
   "@context":"https://schema.org",
   "@type":"Organization",
   "name":"Pointika",
-  "url":"https://pointika.link/about.html",
+  "url":"https://pointika.link",
   "logo":"https://pointika.link/logo.png",
+  "founder":{
+    "@type":"Person",
+    "name":"Syed Asif Ali",
+    "url":"https://syedasifali.link",
+    "sameAs":[
+      "https://www.crunchbase.com/person/syed-asif-ali",
+      "https://www.linkedin.com/in/pointmedia",
+      "https://www.instagram.com/boxer_01101"
+    ]
+  },
   "parentOrganization":{
     "@type":"Organization",
     "name":"Point Media",
     "url":"https://pointmedia.link",
-    "logo":"https://pointmedia.link/logo.png"
+    "sameAs":["https://www.crunchbase.com/organization/pointika"]
   },
-  "founder":{
-    "@type":"Person",
-    "name":"Syed Asif Ali",
-    "url":"https://syedasifali.link"
-  },
+  "knowsAbout":["Digital Branding","Content Creation","Media Visibility","Influencer Campaigns"],
   "sameAs":[
     "https://www.facebook.com/share/1GBFzaSBFg/?mibextid=qi2Omg",
-    "https://www.instagram.com/pointika?igsh=MTJiaHk2b3VsaW4wcw==",
-    "https://www.tiktok.com/@pointika?_r=1&_t=ZS-92ZjspYbH50"
+    "https://www.tiktok.com/@pointika?_r=1&_t=ZS-92ZjspYbH50",
+    "https://www.instagram.com/pointika?igsh=MTJiaHk2b3VsaW4wcw=="
   ],
-  "knowsAbout":["Influencer Management","Digital Campaigns","Content Creation","Brand Storytelling","Social Media Strategy"]
+  "award":["Top Influencer Campaigns 2023","Recognized Digital Sub-Brand in MENA Region"]
 }
 </script>
 
-<style>
-body{margin:0;font-family:Arial;background:#0b0d12;color:#fff;line-height:1.7}
-nav{position:fixed;top:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5)}
-.nav-container{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:bold;color:#60a5fa}
-.logo img{height:32px}
-.menu{display:flex;gap:25px}
-.menu a{color:#e5e7eb;text-decoration:none;font-weight:bold}
-.menu a:hover{color:#60a5fa}
-.menu-btn{display:none;font-size:22px;cursor:pointer}
-@media(max-width:768px){.menu{position:fixed;top:60px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s}.menu.show{right:0}.menu-btn{display:block}}
-header{background:linear-gradient(135deg,#4f46e5,#22d3ee);padding:120px 20px 60px;text-align:center}
-header img{max-height:80px;margin-bottom:15px}
-header h1{margin:0;font-size:36px;color:#fff}
-header p{max-width:800px;margin:15px auto 0;color:#cbd5f5}
-section{max-width:1100px;margin:auto;padding:60px 20px}
-h2{color:#60a5fa;margin-bottom:20px}
-.card{background:#121826;padding:30px;border-radius:16px;margin-bottom:40px;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
-.brand{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.brand div{background:#121826;padding:25px;border-radius:12px;border:1px solid #1e293b}
-footer{text-align:center;padding:30px;background:#020617;color:#aaa}
-a{color:#60a5fa;text-decoration:none}
-a:hover{text-decoration:underline}
-</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
   <div class="nav-container">
-    <div class="logo"><img src="logo.png" alt="Pointika Logo"> Pointika</div>
+    <div class="logo">Pointika</div>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="press.html">Press</a>
-      <a href="founder.html">Founder</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
 
 <header>
-  <img src="logo.png" alt="Pointika Logo">
-  <h1>About Pointika</h1>
-  <p>Pointika is the digital media and storytelling sub-brand of Point Media, focused on influencer management, content creation, and strategic campaigns.</p>
+  <h1>Pointika</h1>
+  <p>Sub-Brand of Point Media · Digital Storytelling · Influencer Campaigns</p>
 </header>
 
 <section>
+
 <div class="card">
-<h2>About the Brand</h2>
-<p>Pointika specializes in building digital presence for influencers and brands, delivering creative campaigns, social media management, and brand storytelling.</p>
+<h2>About Pointika</h2>
+<p>Pointika is a digital storytelling and media platform, acting as a sub-brand of <strong>Point Media</strong>. It specializes in content creation, influencer campaign management, and enhancing online visibility for brands and personalities across MENA.</p>
 </div>
 
 <div class="card">
-<h2>Services Overview</h2>
+<h2>Achievements & Campaigns</h2>
 <ul>
-<li>Influencer Management & Collaboration</li>
-<li>Content Creation & Visual Storytelling</li>
-<li>Social Media Strategy & Campaigns</li>
-<li>Digital Branding & Online Presence Enhancement</li>
+<li>Managed high-profile social media campaigns for top influencers</li>
+<li>Executed strategic digital branding campaigns</li>
+<li>Featured in notable media outlets including TechBullion</li>
+<li>Enhanced online visibility and audience engagement across Instagram, TikTok, and YouTube</li>
+<li>Recognized as a leading sub-brand for storytelling and digital media in the region</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>Founder</h2>
-<p>Founded by <strong>Syed Asif Ali</strong>, Pointika benefits from the expertise and vision of Point Media’s founder in digital campaigns, brand growth, and strategic storytelling.</p>
+<h2>Services</h2>
+<div class="brand">
+  <div>
+    <h3>Content Strategy</h3>
+    <p>Planning and executing compelling content campaigns for digital brands.</p>
+  </div>
+  <div>
+    <h3>Influencer Management</h3>
+    <p>Collaborating with influencers to grow reach and engagement effectively.</p>
+  </div>
+  <div>
+    <h3>Media Visibility</h3>
+    <p>Ensuring brand recognition across multiple digital platforms and media channels.</p>
+  </div>
+</div>
 </div>
 
 </section>
 
 <footer>
-© 2025 Pointika · Sub-Brand of Point Media
+© 2025 Point Media · Sub-Brand: Pointika
 </footer>
 
 <script>
-function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
-document.addEventListener("click",function(e){const menu=document.getElementById("menu");const btn=document.querySelector(".menu-btn");if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove("show")}})
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click",function(e){
+  const menu=document.getElementById("menu");
+  const btn=document.querySelector(".menu-btn");
+  if(!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove("show");
+  }
+});
 </script>
 
 </body>
