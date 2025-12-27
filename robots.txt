@@ -1,0 +1,9 @@
+# Allow all search engines to crawl main content
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Allow: /
+
+# Sitemap location
+Sitemap: https://pointmedia.link/sitemap.xml
+Sitemap: https://pointika.link/sitemap.xml
