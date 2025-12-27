@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press — Pointika Sub-Brand of Point Media</title>
+<meta name="description" content="Press coverage, news, and media appearances for Pointika, the digital media and storytelling sub-brand of Point Media.">
+
+<link rel="canonical" href="https://pointika.link/press.html">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Pointika",
+  "url":"https://pointika.link/press.html",
+  "logo":"https://pointika.link/logo.png",
+  "parentOrganization":{
+    "@type":"Organization",
+    "name":"Point Media",
+    "url":"https://pointmedia.link",
+    "logo":"https://pointmedia.link/logo.png"
+  },
+  "founder":{
+    "@type":"Person",
+    "name":"Syed Asif Ali",
+    "url":"https://syedasifali.link"
+  },
+  "sameAs":[
+    "https://www.facebook.com/share/1GBFzaSBFg/?mibextid=qi2Omg",
+    "https://www.instagram.com/pointika?igsh=MTJiaHk2b3VsaW4wcw==",
+    "https://www.tiktok.com/@pointika?_r=1&_t=ZS-92ZjspYbH50"
+  ],
+  "hasPOS":[],
+  "knowsAbout":["Digital Media","Influencer Management","Content Creation","Press Coverage","Brand Storytelling"]
+}
+</script>
+
+<style>
+body{margin:0;font-family:Arial;background:#0b0d12;color:#fff;line-height:1.7}
+nav{position:fixed;top:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5)}
+.nav-container{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:bold;color:#60a5fa}
+.logo img{height:32px}
+.menu{display:flex;gap:25px}
+.menu a{color:#e5e7eb;text-decoration:none;font-weight:bold}
+.menu a:hover{color:#60a5fa}
+.menu-btn{display:none;font-size:22px;cursor:pointer}
+@media(max-width:768px){.menu{position:fixed;top:60px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s}.menu.show{right:0}.menu-btn{display:block}}
+header{background:linear-gradient(135deg,#4f46e5,#22d3ee);padding:120px 20px 60px;text-align:center}
+header img{max-height:80px;margin-bottom:15px}
+header h1{margin:0;font-size:36px;color:#fff}
+header p{max-width:800px;margin:15px auto 0;color:#cbd5f5}
+section{max-width:1100px;margin:auto;padding:60px 20px}
+h2{color:#60a5fa;margin-bottom:20px}
+.card{background:#121826;padding:30px;border-radius:16px;margin-bottom:40px;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+.press-list{list-style:disc;margin-left:20px}
+footer{text-align:center;padding:30px;background:#020617;color:#aaa}
+a{color:#60a5fa;text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+    <div class="logo"><img src="logo.png" alt="Pointika Logo"> Pointika</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="press.html" class="active">Press</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <img src="logo.png" alt="Pointika Logo">
+  <h1>Pointika Press & Media</h1>
+  <p>Discover news coverage, press releases, and media highlights for Pointika, the sub-brand of Point Media.</p>
+</header>
+
+<section>
+<div class="card">
+<h2>Media Highlights</h2>
+<ul class="press-list">
+<li>Featured in regional digital media campaigns</li>
+<li>Coverage for influencer marketing projects</li>
+<li>Strategic collaborations with social media personalities</li>
+<li>Digital campaigns reported by industry outlets</li>
+<li>Highlighting content creation & storytelling expertise</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Press & Publications</h2>
+<ul class="press-list">
+<li>TechBullion article on influencer campaigns</li>
+<li>Regional media mentions for digital branding projects</li>
+<li>Interviews with founder Syed Asif Ali on Pointika strategies</li>
+<li>Case studies of successful influencer management</li>
+<li>Digital media best practices & storytelling insights</li>
+</ul>
+</div>
+
+</section>
+
+<footer>
+© 2025 Pointika · Sub-Brand of Point Media
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
+document.addEventListener("click",function(e){const menu=document.getElementById("menu");const btn=document.querySelector(".menu-btn");if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove("show")}})
+</script>
+
+</body>
+</html>
