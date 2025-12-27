@@ -44,7 +44,8 @@ body{margin:0;font-family:Arial;background:#0b0d12;color:#fff;line-height:1.7}
 /* NAVIGATION */
 nav{position:fixed;top:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5)}
 .nav-container{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:20px;font-weight:bold;color:#60a5fa}
+.logo{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:bold;color:#60a5fa}
+.logo img{height:42px}
 .menu{display:flex;gap:25px}
 .menu a{color:#e5e7eb;text-decoration:none;font-weight:bold}
 .menu a:hover{color:#60a5fa}
@@ -65,7 +66,10 @@ footer{text-align:center;padding:30px;background:#020617;color:#aaa}
 <!-- NAV -->
 <nav>
   <div class="nav-container">
-    <div class="logo">Pointika</div>
+    <div class="logo">
+      <img src="logo.png" alt="Pointika Logo">
+      <span>Pointika</span>
+    </div>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
